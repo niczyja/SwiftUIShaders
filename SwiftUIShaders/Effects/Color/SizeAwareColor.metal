@@ -9,7 +9,7 @@
 using namespace metal;
 
 [[ stitchable ]] half4 sizeAwareColor(float2 position, half4 color, float2 size) {
-    
-    return half4(color.r * position.x / size.x, color.g * position.y / size.y, color.b * position.x / size.y, 1.0 * position.y / size.x);
+    float2 uv = position.xy / size.xy;
+    return half4(uv.x / uv.y, uv.y / uv.x, color.b, 1.0);
 }
 

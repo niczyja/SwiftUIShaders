@@ -9,6 +9,5 @@
 using namespace metal;
 
 [[ stitchable ]] half4 color(float2 position, half4 color) {
-    
-    return half4(color.r * position.x / 255.0, color.g * position.y / 255.0, color.b, 0.75);
+    return half4(position.x / position.y, position.y / position.x, color.b, 1.0);
 }

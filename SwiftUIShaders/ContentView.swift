@@ -27,11 +27,11 @@ struct ContentView: View {
             ZStack {
                 switch selection {
                 case .some(let s) where s.modifier is ColorShader:
-                    Color.pink.colorShader()
+                    Color.blue.colorShader()
                 case .some(let s) where s.modifier is SizeAwareColorShader:
-                    Color.pink.sizeAwareColorShader()
+                    Color.blue.sizeAwareColorShader()
                 case .some(let s) where s.modifier is TimeAwareColorShader:
-                    Color.pink.timeAwareColorShader()
+                    Color.blue.timeAwareColorShader()
                 case .some(let s) where s.modifier is BasicShapes:
                     Color.black.basicShapes()
                 case .some(let s) where s.modifier is RotatingGear:
