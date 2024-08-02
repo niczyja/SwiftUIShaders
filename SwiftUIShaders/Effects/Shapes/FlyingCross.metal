@@ -17,10 +17,8 @@ float cross(float2 uv, float2 center, float2 size) {
 [[ stitchable ]] half4 flyingCross(float2 position, half4 color, float2 size, float time) {
     float2 uv = position.xy / size.xy;
 
-    uv -= 0.5;
-    uv = rotate2d(sin(time)) * uv;
-    uv = scale2d(cos(time)) * uv;
-    uv += 0.5;
+    uv = rotate2D(uv, sin(time));
+    uv = scale2D(uv, cos(time));
     
     float2 center = 0.1 * float2(sin(time), cos(time)) + 0.5;
     float pct = cross(uv, center, float2(0.2, 0.05));

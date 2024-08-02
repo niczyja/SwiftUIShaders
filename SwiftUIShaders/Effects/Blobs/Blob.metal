@@ -35,7 +35,7 @@ float paintBlob(float2 uv, float2 center, float radius, float width, float time)
     col = paintBlob(uv, center, radius, 0.1, time);
     
     //color with gradient
-    float2 v = rotate2d(time) * uv;
+    float2 v = rotate2D(uv, time);
     col *= half3(v.x, v.y, 0.7 - v.y * v.x);
     
     //paint white circle

@@ -30,9 +30,9 @@ float plot(float2 uv, float pct, float smooth = 0.01);
 float stroke(float2 uv, float weight, float smooth = 0.01);
 
 /// Rotate
-float2x2 rotate2d(float angle);
+float2 rotate2D(float2 uv, float angle);
 
 /// Scale
-float2x2 scale2d(float2 scale);
+float2 scale2D(float2 uv, float2 scale);
 
 #endif /* Helpers_h */

@@ -51,10 +51,16 @@ float stroke(float2 uv, float weight, float smooth) {
 
 //MARK: - Transform
 
-float2x2 rotate2d(float angle) {
-    return float2x2(cos(angle), -sin(angle), sin(angle), cos(angle));
+float2 rotate2D(float2 uv, float angle) {
+    uv -= 0.5;
+    uv *= float2x2(cos(angle), -sin(angle), sin(angle), cos(angle));
+    uv += 0.5;
+    return uv;
 }
 
-float2x2 scale2d(float2 scale) {
-    return float2x2(scale.x, 0.0, 0.0, scale.y);
+float2 scale2D(float2 uv, float2 scale) {
+    uv -= 0.5;
+    uv *= float2x2(scale.x, 0.0, 0.0, scale.y);
+    uv += 0.5;
+    return uv;
 }
