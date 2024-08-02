@@ -17,7 +17,7 @@
 		5211FD902B937A0A004F0440 /* TimeAwareColor.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD8F2B937A0A004F0440 /* TimeAwareColor.metal */; };
 		5211FD922B9381FD004F0440 /* WoodGrain.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD912B9381FD004F0440 /* WoodGrain.metal */; };
 		5211FD942B93B04F004F0440 /* Ripples.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD932B93B04F004F0440 /* Ripples.metal */; };
-		5211FD962B93DA35004F0440 /* Blob.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD952B93DA35004F0440 /* Blob.metal */; };
+		5211FD962B93DA35004F0440 /* NeonBlob.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD952B93DA35004F0440 /* NeonBlob.metal */; };
 		5269B2B12C5CAFB60044A286 /* BasicPatterns.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5269B2B02C5CAFB60044A286 /* BasicPatterns.metal */; };
 		52A2B47E2C255FD500A33A67 /* Dither.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B47D2C255FD500A33A67 /* Dither.metal */; };
 		52C7D2522C58CC2D001D51B5 /* PanelPrezesa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */; };
@@ -42,7 +42,7 @@
 		5211FD8F2B937A0A004F0440 /* TimeAwareColor.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TimeAwareColor.metal; sourceTree = "<group>"; };
 		5211FD912B9381FD004F0440 /* WoodGrain.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = WoodGrain.metal; sourceTree = "<group>"; };
 		5211FD932B93B04F004F0440 /* Ripples.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Ripples.metal; sourceTree = "<group>"; };
-		5211FD952B93DA35004F0440 /* Blob.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Blob.metal; sourceTree = "<group>"; };
+		5211FD952B93DA35004F0440 /* NeonBlob.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = NeonBlob.metal; sourceTree = "<group>"; };
 		5269B2B02C5CAFB60044A286 /* BasicPatterns.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicPatterns.metal; sourceTree = "<group>"; };
 		52A2B47D2C255FD500A33A67 /* Dither.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Dither.metal; sourceTree = "<group>"; };
 		52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelPrezesa.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 			children = (
 				5211FD932B93B04F004F0440 /* Ripples.metal */,
 				52C7D2572C58DD6E001D51B5 /* GlowingBlobs.metal */,
-				5211FD952B93DA35004F0440 /* Blob.metal */,
+				5211FD952B93DA35004F0440 /* NeonBlob.metal */,
 			);
 			path = Blobs;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 				52C7D2562C58CF1A001D51B5 /* Model.swift in Sources */,
 				5211FD902B937A0A004F0440 /* TimeAwareColor.metal in Sources */,
 				5211FD922B9381FD004F0440 /* WoodGrain.metal in Sources */,
-				5211FD962B93DA35004F0440 /* Blob.metal in Sources */,
+				5211FD962B93DA35004F0440 /* NeonBlob.metal in Sources */,
 				52C7D2622C58E86F001D51B5 /* BasicShapes.metal in Sources */,
 				5211FD7A2B93654E004F0440 /* SwiftUIShadersApp.swift in Sources */,
 				52C7D2642C58FCE7001D51B5 /* RotatingGear.metal in Sources */,

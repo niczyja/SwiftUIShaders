@@ -1,5 +1,5 @@
 //
-//  Blob.metal
+//  NeonBlob.metal
 //  SwiftUIShaders
 //
 //  Created by Maciej Sienkiewicz on 02/03/2024.
