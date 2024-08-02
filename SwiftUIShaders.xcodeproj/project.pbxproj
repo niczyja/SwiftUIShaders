@@ -112,10 +112,26 @@
 				52C7D25E2C58E60A001D51B5 /* Color */,
 				52C7D2602C58E858001D51B5 /* Shapes */,
 				52C7D25F2C58E798001D51B5 /* Blobs */,
-				5211FD912B9381FD004F0440 /* WoodGrain.metal */,
-				52A2B47D2C255FD500A33A67 /* Dither.metal */,
+				5269B2AD2C5CAEEF0044A286 /* Wood */,
+				5269B2AE2C5CAEF60044A286 /* Dither */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		5269B2AD2C5CAEEF0044A286 /* Wood */ = {
+			isa = PBXGroup;
+			children = (
+				5211FD912B9381FD004F0440 /* WoodGrain.metal */,
+			);
+			path = Wood;
+			sourceTree = "<group>";
+		};
+		5269B2AE2C5CAEF60044A286 /* Dither */ = {
+			isa = PBXGroup;
+			children = (
+				52A2B47D2C255FD500A33A67 /* Dither.metal */,
+			);
+			path = Dither;
 			sourceTree = "<group>";
 		};
 		52C7D25E2C58E60A001D51B5 /* Color */ = {
