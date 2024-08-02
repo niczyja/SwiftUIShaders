@@ -223,3 +223,25 @@ struct Dither: ViewModifier {
             .colorEffect(ShaderLibrary.dither())
     }
 }
+
+//MARK: - Patterns
+
+extension View {
+    func basicPatterns() -> some View {
+        modifier(BasicPatterns())
+    }
+}
+
+struct BasicPatterns: ViewModifier {
+    private let startDate = Date()
+    func body(content: Content) -> some View {
+        TimelineView(.animation) { _ in
+            content.visualEffect { content, geometryProxy in
+                content.colorEffect(ShaderLibrary.basicPatterns(
+                    .float2(geometryProxy.size),
+                    .float(startDate.timeIntervalSinceNow)
+                ))
+            }
+        }
+    }
+}

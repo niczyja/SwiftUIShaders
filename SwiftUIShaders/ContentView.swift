@@ -50,6 +50,8 @@ struct ContentView: View {
                     PanelPrezesa().dither()
                 case .some(let s) where s.modifier is Dither && s.name.contains("image"):
                     Image("soniczka").resizable().aspectRatio(contentMode: .fit).dither()
+                case .some(let s) where s.modifier is BasicPatterns:
+                    Color.black.basicPatterns()
                 default:
                     Text("Unknown shader")
                 }
