@@ -35,4 +35,10 @@ float2 rotate2D(float2 uv, float angle);
 /// Scale
 float2 scale2D(float2 uv, float2 scale);
 
+/// Tile with separate rows and cols count
+float2 tile(float2 uv, float cols, float rows);
+
+/// Tile with equal number of rows and cols
+float2 tile(float2 uv, float zoom);
+
 #endif /* Helpers_h */

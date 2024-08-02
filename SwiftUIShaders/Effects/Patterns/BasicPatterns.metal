@@ -10,16 +10,6 @@
 using namespace metal;
 #include "../Helpers.h"
 
-float2 tile(float2 uv, float cols, float rows) {
-    uv.x *= cols;
-    uv.y *= rows;
-    return fract(uv);
-}
-
-float2 tile(float2 uv, float zoom) {
-    return tile(uv, zoom, zoom);
-}
-
 [[ stitchable ]] half4 basicPatterns(float2 position, half4 color, float2 size, float time) {
     float2 uv = float2(position.x / size.x, position.y / size.x);
     float zoom = 10.0;

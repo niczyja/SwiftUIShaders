@@ -64,3 +64,15 @@ float2 scale2D(float2 uv, float2 scale) {
     uv += 0.5;
     return uv;
 }
+
+//MARK: - Tile
+
+float2 tile(float2 uv, float cols, float rows) {
+    uv.x *= cols;
+    uv.y *= rows;
+    return fract(uv);
+}
+
+float2 tile(float2 uv, float zoom) {
+    return tile(uv, zoom, zoom);
+}
