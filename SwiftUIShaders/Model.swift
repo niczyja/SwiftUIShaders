@@ -55,6 +55,7 @@ let showcasedShaders: [ShaderGroup] = [
         ShowcaseShader(name: "Ordered dithering (on image)", modifier: Dither())
     ]),
     ShaderGroup(name: "Patterns", shaders: [
-        ShowcaseShader(name: "Basic patterns", modifier: BasicPatterns())
+        ShowcaseShader(name: "Basic patterns", modifier: BasicPatterns()),
+        ShowcaseShader(name: "Offset pattern", modifier: OffsetPattern())
     ]),
 ]

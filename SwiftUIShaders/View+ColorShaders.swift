@@ -245,3 +245,23 @@ struct BasicPatterns: ViewModifier {
         }
     }
 }
+
+extension View {
+    func offsetPattern() -> some View {
+        modifier(OffsetPattern())
+    }
+}
+
+struct OffsetPattern: ViewModifier {
+    private let startDate = Date()
+    func body(content: Content) -> some View {
+        TimelineView(.animation) { _ in
+            content.visualEffect { content, geometryProxy in
+                content.colorEffect(ShaderLibrary.offsetPattern(
+                    .float2(geometryProxy.size),
+                    .float(startDate.timeIntervalSinceNow)
+                ))
+            }
+        }
+    }
+}

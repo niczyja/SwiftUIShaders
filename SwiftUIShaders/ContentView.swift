@@ -52,6 +52,8 @@ struct ContentView: View {
                     Image("soniczka").resizable().aspectRatio(contentMode: .fit).dither()
                 case .some(let s) where s.modifier is BasicPatterns:
                     Color.black.basicPatterns()
+                case .some(let s) where s.modifier is OffsetPattern:
+                    Color.black.offsetPattern()
                 default:
                     Text("Unknown shader")
                 }
