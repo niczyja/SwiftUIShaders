@@ -56,6 +56,7 @@ let showcasedShaders: [ShaderGroup] = [
     ]),
     ShaderGroup(name: "Patterns", shaders: [
         ShowcaseShader(name: "Basic patterns", modifier: BasicPatterns()),
-        ShowcaseShader(name: "Offset pattern", modifier: OffsetPattern())
+        ShowcaseShader(name: "Offset pattern", modifier: OffsetPattern()),
+        ShowcaseShader(name: "Truchet tiles", modifier: TruchetTiles()),
     ]),
 ]

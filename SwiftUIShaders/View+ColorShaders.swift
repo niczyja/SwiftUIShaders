@@ -265,3 +265,23 @@ struct OffsetPattern: ViewModifier {
         }
     }
 }
+
+extension View {
+    func truchetTiles() -> some View {
+        modifier(TruchetTiles())
+    }
+}
+
+struct TruchetTiles: ViewModifier {
+    private let startDate = Date()
+    func body(content: Content) -> some View {
+        TimelineView(.animation) { _ in
+            content.visualEffect { content, geometryProxy in
+                content.colorEffect(ShaderLibrary.truchetTiles(
+                    .float2(geometryProxy.size),
+                    .float(startDate.timeIntervalSinceNow)
+                ))
+            }
+        }
+    }
+}

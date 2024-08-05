@@ -54,6 +54,8 @@ struct ContentView: View {
                     Color.black.basicPatterns()
                 case .some(let s) where s.modifier is OffsetPattern:
                     Color.black.offsetPattern()
+                case .some(let s) where s.modifier is TruchetTiles:
+                    Color.black.truchetTiles()
                 default:
                     Text("Unknown shader")
                 }

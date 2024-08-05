@@ -20,6 +20,7 @@
 		5211FD962B93DA35004F0440 /* NeonBlob.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD952B93DA35004F0440 /* NeonBlob.metal */; };
 		5269B2B12C5CAFB60044A286 /* BasicPatterns.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5269B2B02C5CAFB60044A286 /* BasicPatterns.metal */; };
 		5269B2B32C5D005A0044A286 /* OffsetPattern.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5269B2B22C5D005A0044A286 /* OffsetPattern.metal */; };
+		5269B2B52C5E4E890044A286 /* TruchetTiles.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5269B2B42C5E4E890044A286 /* TruchetTiles.metal */; };
 		52A2B47E2C255FD500A33A67 /* Dither.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B47D2C255FD500A33A67 /* Dither.metal */; };
 		52C7D2522C58CC2D001D51B5 /* PanelPrezesa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */; };
 		52C7D2562C58CF1A001D51B5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2552C58CF1A001D51B5 /* Model.swift */; };
@@ -46,6 +47,7 @@
 		5211FD952B93DA35004F0440 /* NeonBlob.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = NeonBlob.metal; sourceTree = "<group>"; };
 		5269B2B02C5CAFB60044A286 /* BasicPatterns.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicPatterns.metal; sourceTree = "<group>"; };
 		5269B2B22C5D005A0044A286 /* OffsetPattern.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OffsetPattern.metal; sourceTree = "<group>"; };
+		5269B2B42C5E4E890044A286 /* TruchetTiles.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TruchetTiles.metal; sourceTree = "<group>"; };
 		52A2B47D2C255FD500A33A67 /* Dither.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Dither.metal; sourceTree = "<group>"; };
 		52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelPrezesa.swift; sourceTree = "<group>"; };
 		52C7D2552C58CF1A001D51B5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				5269B2B02C5CAFB60044A286 /* BasicPatterns.metal */,
 				5269B2B22C5D005A0044A286 /* OffsetPattern.metal */,
+				5269B2B42C5E4E890044A286 /* TruchetTiles.metal */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				52C7D25D2C58E5F8001D51B5 /* Helpers.metal in Sources */,
 				52C7D2562C58CF1A001D51B5 /* Model.swift in Sources */,
 				5211FD902B937A0A004F0440 /* TimeAwareColor.metal in Sources */,
+				5269B2B52C5E4E890044A286 /* TruchetTiles.metal in Sources */,
 				5211FD922B9381FD004F0440 /* WoodGrain.metal in Sources */,
 				5211FD962B93DA35004F0440 /* NeonBlob.metal in Sources */,
 				52C7D2622C58E86F001D51B5 /* BasicShapes.metal in Sources */,
