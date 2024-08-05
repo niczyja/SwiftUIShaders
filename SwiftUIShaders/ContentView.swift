@@ -9,58 +9,68 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var shaderStore = ShowcaseShaderStore()
     @State private var selection: ShowcaseShader?
     
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
-                ForEach(showcasedShaders) { group in
-                    Section(group.name) {
-                        ForEach(group.shaders) { shader in
-                            NavigationLink(shader.name, value: shader)
-                        }
-                    }
+                ForEach(shaderStore.groups) { group in
+                    ShaderSection(group: group)
                 }
             }
             .navigationTitle("Shaders")
         } detail: {
+            ShaderDetail(shader: selection)
+                .ignoresSafeArea()
+        }
+    }
+    
+    struct ShaderSection: View {
+        let group: ShaderGroup
+        @SceneStorage private var isExpanded: Bool
+        
+        init(group: ShaderGroup) {
+            self.group = group
+            self._isExpanded = SceneStorage(wrappedValue: true, "expanded-\(group.id.uuidString)")
+        }
+        
+        var body: some View {
+            Section(group.name, isExpanded: $isExpanded) {
+                ForEach(group.shaders) { shader in
+                    NavigationLink(shader.name, value: shader)
+                }
+            }
+        }
+    }
+    
+    struct ShaderDetail: View {
+        let shader: ShowcaseShader?
+        
+        var body: some View {
             ZStack {
-                switch selection {
-                case .some(let s) where s.modifier is ColorShader:
-                    Color.blue.colorShader()
-                case .some(let s) where s.modifier is SizeAwareColorShader:
-                    Color.blue.sizeAwareColorShader()
-                case .some(let s) where s.modifier is TimeAwareColorShader:
-                    Color.blue.timeAwareColorShader()
-                case .some(let s) where s.modifier is BasicShapes:
-                    Color.black.basicShapes()
-                case .some(let s) where s.modifier is RotatingGear:
-                    Color.pink.rotatingGear()
-                case .some(let s) where s.modifier is FlyingCross:
-                    Color.pink.flyingCross()
-                case .some(let s) where s.modifier is Ripples:
-                    Color.pink.ripples()
-                case .some(let s) where s.modifier is GlowingBlobs:
-                    Color.black.glowingBlobs()
-                case .some(let s) where s.modifier is NeonBlob:
-                    Color.pink.neonBlob()
-                case .some(let s) where s.modifier is WoodGrain:
-                    Color.black.woodGrain(seed: Double.random(in: 0...1))
-                case .some(let s) where s.modifier is Dither && s.name.contains("view"):
-                    PanelPrezesa().dither()
-                case .some(let s) where s.modifier is Dither && s.name.contains("image"):
-                    Image("soniczka").resizable().aspectRatio(contentMode: .fit).dither()
-                case .some(let s) where s.modifier is BasicPatterns:
-                    Color.black.basicPatterns()
-                case .some(let s) where s.modifier is OffsetPattern:
-                    Color.black.offsetPattern()
-                case .some(let s) where s.modifier is TruchetTiles:
-                    Color.black.truchetTiles()
-                default:
+                switch shader?.kind {
+                case .color where shader!.name.contains("on view"):
+                    OpenTTDSplash()
+                        .colorEffectShader(shader!.functionName)
+                case .color where shader!.name.contains("on image"):
+                    Image("soniczka")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .colorEffectShader(shader!.functionName)
+                case .color:
+                    Color.blue
+                        .colorEffectShader(shader!.functionName)
+                case .animatedColor:
+                    Color.blue
+                        .animatedColorEffectShader(shader!.functionName)
+                case .seededColor:
+                    Color.blue
+                        .seededColorEffectShader(shader!.functionName, Double.random(in: 0...1))
+                case nil:
                     Text("Unknown shader")
                 }
             }
-            .ignoresSafeArea()
         }
     }
 }

@@ -11,8 +11,8 @@
 		5211FD7C2B93654E004F0440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD7B2B93654E004F0440 /* ContentView.swift */; };
 		5211FD7E2B93654F004F0440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5211FD7D2B93654F004F0440 /* Assets.xcassets */; };
 		5211FD822B93654F004F0440 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5211FD812B93654F004F0440 /* Preview Assets.xcassets */; };
-		5211FD8A2B936B27004F0440 /* Color.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD892B936B27004F0440 /* Color.metal */; };
-		5211FD8C2B936E04004F0440 /* View+ColorShaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD8B2B936E04004F0440 /* View+ColorShaders.swift */; };
+		5211FD8A2B936B27004F0440 /* BasicColor.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD892B936B27004F0440 /* BasicColor.metal */; };
+		5211FD8C2B936E04004F0440 /* View+EffectShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD8B2B936E04004F0440 /* View+EffectShader.swift */; };
 		5211FD8E2B936EF8004F0440 /* SizeAwareColor.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD8D2B936EF8004F0440 /* SizeAwareColor.metal */; };
 		5211FD902B937A0A004F0440 /* TimeAwareColor.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD8F2B937A0A004F0440 /* TimeAwareColor.metal */; };
 		5211FD922B9381FD004F0440 /* WoodGrain.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5211FD912B9381FD004F0440 /* WoodGrain.metal */; };
@@ -22,7 +22,7 @@
 		5269B2B32C5D005A0044A286 /* OffsetPattern.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5269B2B22C5D005A0044A286 /* OffsetPattern.metal */; };
 		5269B2B52C5E4E890044A286 /* TruchetTiles.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5269B2B42C5E4E890044A286 /* TruchetTiles.metal */; };
 		52A2B47E2C255FD500A33A67 /* Dither.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B47D2C255FD500A33A67 /* Dither.metal */; };
-		52C7D2522C58CC2D001D51B5 /* PanelPrezesa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */; };
+		52C7D2522C58CC2D001D51B5 /* OpenTTDSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2512C58CC2D001D51B5 /* OpenTTDSplash.swift */; };
 		52C7D2562C58CF1A001D51B5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2552C58CF1A001D51B5 /* Model.swift */; };
 		52C7D2582C58DD6E001D51B5 /* GlowingBlobs.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D2572C58DD6E001D51B5 /* GlowingBlobs.metal */; };
 		52C7D25D2C58E5F8001D51B5 /* Helpers.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52C7D25C2C58E5F8001D51B5 /* Helpers.metal */; };
@@ -38,8 +38,8 @@
 		5211FD7D2B93654F004F0440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5211FD7F2B93654F004F0440 /* SwiftUIShaders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIShaders.entitlements; sourceTree = "<group>"; };
 		5211FD812B93654F004F0440 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5211FD892B936B27004F0440 /* Color.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Color.metal; sourceTree = "<group>"; };
-		5211FD8B2B936E04004F0440 /* View+ColorShaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ColorShaders.swift"; sourceTree = "<group>"; };
+		5211FD892B936B27004F0440 /* BasicColor.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicColor.metal; sourceTree = "<group>"; };
+		5211FD8B2B936E04004F0440 /* View+EffectShader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+EffectShader.swift"; sourceTree = "<group>"; };
 		5211FD8D2B936EF8004F0440 /* SizeAwareColor.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SizeAwareColor.metal; sourceTree = "<group>"; };
 		5211FD8F2B937A0A004F0440 /* TimeAwareColor.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TimeAwareColor.metal; sourceTree = "<group>"; };
 		5211FD912B9381FD004F0440 /* WoodGrain.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = WoodGrain.metal; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		5269B2B22C5D005A0044A286 /* OffsetPattern.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OffsetPattern.metal; sourceTree = "<group>"; };
 		5269B2B42C5E4E890044A286 /* TruchetTiles.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TruchetTiles.metal; sourceTree = "<group>"; };
 		52A2B47D2C255FD500A33A67 /* Dither.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Dither.metal; sourceTree = "<group>"; };
-		52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelPrezesa.swift; sourceTree = "<group>"; };
+		52C7D2512C58CC2D001D51B5 /* OpenTTDSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTTDSplash.swift; sourceTree = "<group>"; };
 		52C7D2552C58CF1A001D51B5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		52C7D2572C58DD6E001D51B5 /* GlowingBlobs.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GlowingBlobs.metal; sourceTree = "<group>"; };
 		52C7D25B2C58E5E9001D51B5 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
@@ -90,11 +90,11 @@
 			isa = PBXGroup;
 			children = (
 				5211FD882B936B15004F0440 /* Effects */,
-				52C7D2552C58CF1A001D51B5 /* Model.swift */,
 				5211FD792B93654E004F0440 /* SwiftUIShadersApp.swift */,
 				5211FD7B2B93654E004F0440 /* ContentView.swift */,
-				52C7D2512C58CC2D001D51B5 /* PanelPrezesa.swift */,
-				5211FD8B2B936E04004F0440 /* View+ColorShaders.swift */,
+				52C7D2552C58CF1A001D51B5 /* Model.swift */,
+				52C7D2512C58CC2D001D51B5 /* OpenTTDSplash.swift */,
+				5211FD8B2B936E04004F0440 /* View+EffectShader.swift */,
 				5211FD7D2B93654F004F0440 /* Assets.xcassets */,
 				5211FD7F2B93654F004F0440 /* SwiftUIShaders.entitlements */,
 				5211FD802B93654F004F0440 /* Preview Content */,
@@ -154,7 +154,7 @@
 		52C7D25E2C58E60A001D51B5 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				5211FD892B936B27004F0440 /* Color.metal */,
+				5211FD892B936B27004F0440 /* BasicColor.metal */,
 				5211FD8D2B936EF8004F0440 /* SizeAwareColor.metal */,
 				5211FD8F2B937A0A004F0440 /* TimeAwareColor.metal */,
 			);
@@ -254,7 +254,7 @@
 				5211FD7C2B93654E004F0440 /* ContentView.swift in Sources */,
 				5211FD942B93B04F004F0440 /* Ripples.metal in Sources */,
 				52C7D2662C59021B001D51B5 /* FlyingCross.metal in Sources */,
-				52C7D2522C58CC2D001D51B5 /* PanelPrezesa.swift in Sources */,
+				52C7D2522C58CC2D001D51B5 /* OpenTTDSplash.swift in Sources */,
 				52C7D25D2C58E5F8001D51B5 /* Helpers.metal in Sources */,
 				52C7D2562C58CF1A001D51B5 /* Model.swift in Sources */,
 				5211FD902B937A0A004F0440 /* TimeAwareColor.metal in Sources */,
@@ -265,10 +265,10 @@
 				5211FD7A2B93654E004F0440 /* SwiftUIShadersApp.swift in Sources */,
 				52C7D2642C58FCE7001D51B5 /* RotatingGear.metal in Sources */,
 				52A2B47E2C255FD500A33A67 /* Dither.metal in Sources */,
-				5211FD8A2B936B27004F0440 /* Color.metal in Sources */,
+				5211FD8A2B936B27004F0440 /* BasicColor.metal in Sources */,
 				5211FD8E2B936EF8004F0440 /* SizeAwareColor.metal in Sources */,
 				52C7D2582C58DD6E001D51B5 /* GlowingBlobs.metal in Sources */,
-				5211FD8C2B936E04004F0440 /* View+ColorShaders.swift in Sources */,
+				5211FD8C2B936E04004F0440 /* View+EffectShader.swift in Sources */,
 				5269B2B12C5CAFB60044A286 /* BasicPatterns.metal in Sources */,
 				5269B2B32C5D005A0044A286 /* OffsetPattern.metal in Sources */,
 			);

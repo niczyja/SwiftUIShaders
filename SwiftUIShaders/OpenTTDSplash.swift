@@ -1,5 +1,5 @@
 //
-//  PanelPrezesa.swift
+//  OpenTTDSplash.swift
 //  SwiftUIShaders
 //
 //  Created by Maciej Sienkiewicz on 30/07/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PanelPrezesa: View {
+struct OpenTTDSplash: View {
     var body: some View {
         ZStack {
             Color(.black)
@@ -64,5 +64,5 @@ struct PanelPrezesa: View {
 }
 
 #Preview {
-    PanelPrezesa()
+    OpenTTDSplash()
 }

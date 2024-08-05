@@ -41,7 +41,7 @@ half dither(half colorComp, float2 position) {
     return (distance < indexValue(position)) ? closest : secondClosest;
 }
 
-[[ stitchable ]] half4 dither(float2 position, half4 color) {
+[[ stitchable ]] half4 dither(float2 position, half4 color, float2 size) {
     return half4(dither(color[0], position),
                  dither(color[1], position),
                  dither(color[2], position),
